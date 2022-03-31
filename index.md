@@ -1,4 +1,4 @@
-[Minigames](./minigames.html)
+[Minigames](./minigames.html) [Survival](./survival.html) [Creative](./creative.html)
 
 ## Now in OPEN BETA
 
