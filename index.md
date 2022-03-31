@@ -1,4 +1,6 @@
-## Welcome to MangoMC! NOW IN OPEN BETA
+## Welcome to MangoMC!
+
+##Now in OPEN BETA
 
 MangoMC is a new Minecraft server focused on our community.
 
