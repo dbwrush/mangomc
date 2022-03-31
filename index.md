@@ -1,8 +1,8 @@
 ## Welcome to MangoMC!
 
-##Now in OPEN BETA
-
 MangoMC is a new Minecraft server focused on our community.
+
+#Now in OPEN BETA
 
 We currently host a Survival SMP and Creative plotworld, and are in the process of adding minigames.
 
