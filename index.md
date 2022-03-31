@@ -1,4 +1,4 @@
-# Welcome to MangoMC!
+[Minigames](./minigames.html)
 
 ## Now in OPEN BETA
 
