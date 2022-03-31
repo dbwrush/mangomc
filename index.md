@@ -1,5 +1,3 @@
-[Minigames](./minigames.html) [Survival](./survival.html) [Creative](./creative.html)
-
 ## Now in OPEN BETA
 
 MangoMC is a new Minecraft server focused on our community.
