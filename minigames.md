@@ -1,4 +1,3 @@
-# Minigames
 MangoMC is always looking to improve our selection in minigames. Currently we have 2 custom minigames created by [sudologic](sudologic.net).
 
 ## ElytraDogfights
