@@ -1,4 +1,4 @@
-# ([Join our Discord!](https://discord.gg/AYctqMETWg)
+# [Join our Discord!](https://discord.gg/AYctqMETWg)
 
 ## Now in OPEN BETA
 
