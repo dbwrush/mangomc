@@ -1,3 +1,5 @@
+# ([Join our Discord!](https://discord.gg/AYctqMETWg)
+
 ## Now in OPEN BETA
 
 MangoMC is a new Minecraft server focused on our community.
