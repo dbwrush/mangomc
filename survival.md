@@ -7,8 +7,5 @@ Land you claim will be protected from griefing, and you can share it with other 
 ## Shopkeepers
 Players may use Shopkeepers to exchange items with other players. A Shopkeeper spawn egg can be purchased at the spawnpoint for the price of 5 diamonds. Read about the ShopKeepers plugin [here](https://dev.bukkit.org/projects/shopkeepers).
 
-## Dynmap
+## [Dynmap - World Map](http://play.mangomc.net:8123)
 
-{% raw %}
-<iframe width="100%" height="1200" src="http://play.mangomc.net:8123" alt="There should be an interactive map here!"></iframe>
-{% endraw %}
