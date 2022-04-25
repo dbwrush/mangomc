@@ -10,5 +10,5 @@ Players may use Shopkeepers to exchange items with other players. A Shopkeeper s
 ## Dynmap
 
 {% raw %}
-<iframe src="http://play.mangomc.net:8123" alt="There should be an interactive map here!"></iframe>
+<iframe id="content" class="main-content" src="http://play.mangomc.net:8123" alt="There should be an interactive map here!"></iframe>
 {% endraw %}
