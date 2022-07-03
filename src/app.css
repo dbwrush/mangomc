@@ -21,7 +21,7 @@ html {
 body {
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image: linear-gradient(#7B2C28 80px, #ffb59e 200px, var(--bg) 400px);
+    background-image: linear-gradient(#ff8f00 80px, #ffd59e 200px, var(--bg) 400px);
     color: var(--fg);
     height: 100vh;
 }
@@ -81,6 +81,7 @@ code {
     color: var(--light);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px #f22b2b;
 }
 
 .header a {
@@ -91,6 +92,7 @@ code {
 .header h1 {
     font-size: 4rem;
     margin: 1rem;
+    text-shadow: 0 0 50px #f22b2b;
 }
 
 .overlapping-button {
@@ -132,7 +134,7 @@ code {
 
 .ribbon {
     display: block;
-    background: #f7c2c2;
+    background: #f4edae;
     height: 48px;
 }
 
