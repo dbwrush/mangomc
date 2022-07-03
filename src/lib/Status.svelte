@@ -4,29 +4,56 @@
 
     let serverStatus = null
     let statusString = ''
+    let timeoutId
 
-    onMount(async () => {
+    async function updateServerInfo(waitTime) {
+        if (timeoutId) clearTimeout(timeoutId)
         let lastServerStatus = localStorage.getItem('serverStatusJson');
-        let lastServerStatusTime = parseInt(
-            localStorage.getItem('serverStatusTime') ?? '0'
-        );
-        if (
-            !lastServerStatus ||
-            Date.now() - lastServerStatusTime > 60 * 1000
-        ) {
-            let req = await fetch(
-                'https://api.mcstatus.io/v1/status/java/play.mangomc.net'
-            );
-            serverStatus = await req.json();
+        let lastServerStatusNext = parseInt(
+            localStorage.getItem('serverStatusNext') ?? '0'
+        )*1000
+        if (Date.now() > lastServerStatusNext) {
+            console.log('Fetching')
+            let res
+            try {
+                res = await fetch(
+                    'https://api.mcstatus.io/v1/status/java/play.mangomc.net'
+                )
+            } catch (error) {
+                console.log('Fetch failed. ', error)
+                timeoutId = setTimeout(() => {
+                    updateServerInfo((waitTime??1000)+(60*1000))
+                }, waitTime??1000)
+            }
+            let responseHeaders = Object.fromEntries(res.headers)
+            console.log(responseHeaders)
+            let timeToNext = 2*60
+            if (responseHeaders['x-cache-time-remaining']) {
+                timeToNext = parseInt(responseHeaders['x-cache-time-remaining'])
+            }
+            timeToNext+=5 // Just in case the API's timer is off by a bit.
+            serverStatus = await res.json();
             localStorage.setItem(
                 'serverStatusJson',
                 JSON.stringify(serverStatus)
             );
-            localStorage.setItem('serverStatusTime', Date.now().toString())
+            localStorage.setItem('serverStatusNext', (Date.now()/1000+(timeToNext)).toString())
             console.log('Saved serverStatus')
+            timeoutId = setTimeout(updateServerInfo, timeToNext*1000)
+            console.log('Next fetching in', timeToNext, 'seconds')
         } else {
-            console.log('ServerStatus cached')
+            console.log('ServerStatus read from cache')
             serverStatus = JSON.parse(lastServerStatus)
+            timeoutId = setTimeout(updateServerInfo, Math.ceil(lastServerStatusNext-Date.now()))
+            console.log('Next fetching in', Math.ceil((lastServerStatusNext-Date.now())/1000), 'seconds')
+        }
+    }
+
+    onMount(() => {
+        updateServerInfo()
+        return () => {
+            console.log('Clearing timeout')
+            if (timeoutId) clearTimeout(timeoutId)
         }
     })
 
@@ -77,6 +104,7 @@
             statusString = '(Failed to copy IP)'
             setTimeout(() => statusString = '', 5000)
         }
+        // not bothering to clear timeout, its 5 seconds.
         console.log(statusString)
     }
 </script>
@@ -107,10 +135,15 @@
     </div>
 {/if}
 {#if !serverStatus}
-    <h2 style="width: fit-content; font-size: 2rem; margin: 0 auto;">
-        Java and Bedrock
-    </h2>
-    <h3 style="width: fit-content; font-size: 1.5rem; margin: 0 auto;">
-        play.mangomc.net
-    </h3>
+    <div class="server-info">
+        <img
+            class="server-info-icon"
+            src="/logo.png"
+            alt="MangoMC Logo"
+        /><div class="server-info-content">
+            <span class="server-info_top-bar"
+                ><span class="server-info_name">Loading server info</span><noscript><span class="server-info_status">(Enable JavaScript!)</span></noscript></span
+            >
+        </div>
+    </div>
 {/if}
