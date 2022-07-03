@@ -77,7 +77,7 @@
             statusString = '(Failed to copy IP)'
             setTimeout(() => statusString = '', 5000)
         }
-        console.log(success)
+        console.log(statusString)
     }
 </script>
 
