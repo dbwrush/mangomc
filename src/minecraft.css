@@ -181,6 +181,11 @@ code {
     display: block;
 }
 
+.server-info_status {
+    color: #aaa;
+    margin-left: 1rem;
+}
+
 select:hover {
     opacity: 1;
 }
