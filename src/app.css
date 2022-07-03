@@ -21,7 +21,7 @@ html {
 body {
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image: linear-gradient(#ff8f00 80px, #ffd59e 200px, var(--bg) 400px);
+    background: var(--bg);
     color: var(--fg);
     height: 100vh;
 }
@@ -77,16 +77,55 @@ code {
 }
 
 .header {
+    background-image: linear-gradient(#ff8f00 40px, #e3cb84);
     text-align: center;
     color: var(--light);
     font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px #f22b2b;
+    padding-bottom: 1rem;
+    overflow: hidden;
 }
 
 .header a {
     color: white;
     text-decoration: none;
+}
+
+/* shadow instead of background */
+/* .link-button:hover {
+    background: #f22b2b3d;
+}
+
+.link-button {
+    border: 3px solid white;
+    filter: drop-shadow(#f22b2b 0px 0px 6px);
+    padding: 2px 8px;
+    margin: 4px 8px;
+    transition: 200ms background-color;
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+} */
+
+/* solid bg always */
+.link-button:hover {
+    background: #f22b2b85;
+}
+.link-button {
+    border: 3px solid white;
+    padding: 2px 8px;
+    margin: 4px 8px;
+    transition: 200ms background-color;
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+    background: #f22b2b36;
+}
+
+@media (min-width: 750px) {
+    .link-button {
+        width: 30%;
+        max-width: 300px;
+    }
 }
 
 .header h1 {

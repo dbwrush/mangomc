@@ -40,6 +40,18 @@ code {
     text-decoration: none;
 }
 
+.link-button {
+    margin: 4px 0;
+}
+
+.link-button:not(:last-child)::after {
+    content: '-';
+    pointer-events: none;
+    cursor: default;
+    display: inline-block;
+    margin: 4px 8px;
+}
+
 .header h1 {
     font-size: 4rem;
     margin: 1rem;
