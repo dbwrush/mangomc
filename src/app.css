@@ -182,7 +182,7 @@ code {
     padding: 48px 10px;
     color: var(--light);
     margin-top: -44px;
-    background: linear-gradient(var(--dark), rgba(0,0,0,90%), var(--dark)), url('textures/dirt.png');
+    background: linear-gradient(var(--dark), rgba(0,0,0,90%), var(--dark)), url('/textures/dirt.png');
     background-size: auto, auto;
     background-size: 48px;
 }
