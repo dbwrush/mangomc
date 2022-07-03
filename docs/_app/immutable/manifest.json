@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-69cc6199.js",
+    "file": "start-f0757e8a.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -82,7 +82,7 @@
     ]
   },
   "src/routes/survival.md": {
-    "file": "pages/survival.md-a8b6c295.js",
+    "file": "pages/survival.md-a953d638.js",
     "src": "src/routes/survival.md",
     "isEntry": true,
     "isDynamicEntry": true,
