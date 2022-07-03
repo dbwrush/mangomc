@@ -2,6 +2,8 @@
 title: Survival | MangoMC
 ---
 
+# Survival
+
 MangoMC hosts a vanilla-like Survival world with quality-of-life improvements and anti-griefing plugins.
 
 ## Plot Claiming
@@ -11,4 +13,9 @@ Land you claim will be protected from griefing, and you can share it with other 
 ## Shopkeepers
 Players may use Shopkeepers to exchange items with other players. A Shopkeeper spawn egg can be purchased at the spawnpoint for the price of 5 diamonds. Read about the ShopKeepers plugin [here](https://dev.bukkit.org/projects/shopkeepers).
 
-## [Dynmap - World Map (Broken)](http://play.mangomc.net:8123)
+## Dynmap
+
+<iframe
+    width="100%"
+    src="https://dynmap.mangomc.net/?worldname=world&mapname=flat&zoom=4&x=-616&y=64&z=-2807">
+</iframe>
