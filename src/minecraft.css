@@ -170,6 +170,11 @@ code {
     background: rgba(0,0,0,10%);
 }
 
+.server-info-content {
+    float: left;
+    width: calc(100% - 74px);
+}
+
 .server-info-icon {
     display: block;
     float: left;

@@ -209,6 +209,12 @@ code {
     border: 2px solid rgba(255,255,255,50%);
     box-shadow: 0 0 8px rgba(255,255,255,50%);
     padding: 4px 6px;
+    overflow: hidden;
+}
+
+.server-info-content {
+    float: left;
+    width: calc(100% - 74px);
 }
 
 .server-info-icon {
