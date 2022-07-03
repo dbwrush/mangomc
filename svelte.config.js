@@ -11,6 +11,9 @@ const config = {
             assets: "docs",
             fallback: 'index.html'
         }),
+        prerender: {
+            default: true
+        },
         paths: {
             // change below to your repo name
             base: dev ? "" : "",

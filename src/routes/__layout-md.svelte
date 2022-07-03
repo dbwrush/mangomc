@@ -13,7 +13,7 @@
 
 <div class="header">
     <a href="/"><h1>MangoMC</h1></a>
-    <p>Survival SMP / Creative plots / Minigames</p>
+    <p><a href="/survival">Survival SMP</a> / <a href="/creative">Creative plots</a> / <a href="/minigames">Minigames</a></p>
 </div>
 {#if hasRibbon}
     <div class="ribbon"></div>
