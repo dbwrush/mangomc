@@ -19,3 +19,5 @@ Players may use Shopkeepers to exchange items with other players. A Shopkeeper s
     width="100%"
     src="https://dynmap.mangomc.net/?worldname=world&mapname=flat&zoom=4&x=-616&y=64&z=-2807">
 </iframe>
+
+[View Dynmap in a new tab](https://dynmap.mangomc.net)
