@@ -15,6 +15,7 @@
       "src/routes/index.md",
       "src/routes/minigames.md",
       "src/routes/survival.md"
+      "src/routes/about.md"
     ]
   },
   ".svelte-kit/runtime/components/layout.svelte": {
@@ -84,6 +85,17 @@
   "src/routes/survival.md": {
     "file": "pages/survival.md-a953d638.js",
     "src": "src/routes/survival.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e25ff828.js",
+      "src/routes/__layout-md.svelte",
+      "_preload-helper-60cab3ee.js"
+    ]
+  },
+  "src/routes/about.md": {
+    "file": "pages/about.md-a953d638.js",
+    "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
