@@ -1,23 +1,26 @@
 {
-  "name": "mangomc",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.34",
-    "@sveltejs/kit": "next",
-    "autoprefixer": "^10.4.7",
-    "mdsvex": "^0.10.6",
-    "postcss": "^8.4.14",
-    "postcss-load-config": "^4.0.1",
-    "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.10.7"
-  },
-  "type": "module",
-  "dependencies": {
-    "sanitize-html": "^2.7.0"
-  }
+	"name": "mangomc",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.34",
+		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.7",
+		"mdsvex": "^0.10.6",
+		"postcss": "^8.4.14",
+		"postcss-load-config": "^4.0.1",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^3.44.0",
+		"svelte-preprocess": "^4.10.7"
+	},
+	"type": "module",
+	"dependencies": {
+		"sanitize-html": "^2.7.0"
+	}
 }
