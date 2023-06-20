@@ -5,11 +5,11 @@
 		let newStyle = ''
 		switch (value) {
 			case 'minecraft': {
-				newStyle = await import('../minecraft.css')
+				newStyle = await import('../minecraft.postcss')
 				break
 			}
 			default: {
-				newStyle = await import('../app.css')
+				newStyle = await import('../app.postcss')
 				break
 			}
 		}
