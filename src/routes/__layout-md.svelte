@@ -26,10 +26,7 @@
 {/if}
 <div class="a-bg min-half-full">
 	{#if hasRibbon}
-		<a
-			class="overlapping-button"
-			href="https://discord.com/invite/AYctqMETWg"
-		>
+		<a class="overlapping-button" href="https://discord.com/invite/AYctqMETWg">
 			Join the Discord!
 		</a>
 	{/if}

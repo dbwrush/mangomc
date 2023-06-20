@@ -33,10 +33,7 @@
 			timeToNext += 5 // Just in case the API's timer is off by a bit.
 			serverStatus = await res.json()
 			console.log(serverStatus)
-			localStorage.setItem(
-				'serverStatusJson',
-				JSON.stringify(serverStatus)
-			)
+			localStorage.setItem('serverStatusJson', JSON.stringify(serverStatus))
 			localStorage.setItem(
 				'serverStatusNext',
 				(Date.now() / 1000 + timeToNext).toString()
@@ -123,18 +120,13 @@
 
 {#if serverStatus}
 	<button class="server-info" on:click={copyServerIp}>
-		<img
-			class="server-info-icon"
-			src={serverStatus.icon}
-			alt="MangoMC Logo"
-		/>
+		<img class="server-info-icon" src={serverStatus.icon} alt="MangoMC Logo" />
 		<div class="server-info-content">
 			<span class="server-info_top-bar"
 				><span class="server-info_name">MangoMC</span><span
 					class="server-info_status">{statusString}</span
 				><span class="server-info_playercount"
-					>{serverStatus.players.online}/{serverStatus.players
-						.max}</span
+					>{serverStatus.players.online}/{serverStatus.players.max}</span
 				></span
 			>{@html sanitizeHtml(serverStatus.motd.html, {
 				allowedTags: ['span'],
@@ -150,8 +142,7 @@
 		<img class="server-info-icon" src="/logo.png" alt="MangoMC Logo" />
 		<div class="server-info-content">
 			<span class="server-info_top-bar"
-				><span class="server-info_name">Loading server info</span
-				><noscript
+				><span class="server-info_name">Loading server info</span><noscript
 					><span class="server-info_status">(Enable JavaScript!)</span
 					></noscript
 				></span
