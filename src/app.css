@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    color-scheme: light dark;
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     margin: 0;
     background: var(--bg);

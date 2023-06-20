@@ -8,10 +8,6 @@
 				newStyle = await import('../minecraft.css')
 				break
 			}
-			case 'hazycore': {
-				newStyle = await import('../hazycore.css')
-				break
-			}
 			default: {
 				newStyle = await import('../app.css')
 				break
@@ -28,5 +24,4 @@
 <select on:input={changeTheme}>
 	<option value="original" selected>Original</option>
 	<option value="minecraft">Minecraft</option>
-	<option value="hazycore">hazycore</option>
 </select>
