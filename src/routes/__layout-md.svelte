@@ -14,7 +14,7 @@
 	<a href="/"><h1>MangoMC</h1></a>
 	<p>
 		<a class="link-button" href="/survival">Survival SMP</a>
-		<a class="link-button" href="/creative">Creative plots</a>
+		<a class="link-button" href="/creative">Creative Plots</a>
 		<a class="link-button" href="/minigames">Minigames</a>
 	</p>
 </div>
