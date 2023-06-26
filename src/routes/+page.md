@@ -22,9 +22,8 @@ hasRibbon: true
 </script>
 
 <Gallery imageComponent={ImgWrapper} {images} />
- 
-<br>
 
+<br>
 
 MangoMC is a new Minecraft server focused on our community. We currently
 host a Survival SMP and [Creative plotworld](/creative), and are in the process of
