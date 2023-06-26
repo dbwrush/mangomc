@@ -4,6 +4,7 @@
 </script>
 
 <script>
+	import { fade, scale } from 'svelte/transition'
 	import { browser } from '$app/environment'
 	import { focusTrap } from 'svelte-focus-trap'
 	import '../app.postcss'
@@ -56,14 +57,22 @@
 </div>
 
 {#if $zoomedInImg}
-	<div class="zoomed-in-wrapper" use:focusTrap>
+	<div
+		class="zoomed-in-wrapper"
+		transition:fade={{ duration: 100 }}
+		use:focusTrap
+	>
 		<button
 			tabindex="-1"
 			aria-hidden="true"
 			class="escape-button-bg"
 			on:click={() => ($zoomedInImg = null)}
 		/>
-		<img alt={$zoomedInImg.alt} {...$zoomedInImg} />
+		<img
+			transition:scale={{ duration: 200, start: 0.95 }}
+			alt={$zoomedInImg.alt}
+			{...$zoomedInImg}
+		/>
 		<button
 			class="escape-button"
 			aria-label="escape"
