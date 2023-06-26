@@ -56,6 +56,12 @@
 	</div>
 </div>
 
+<svelte:window
+	on:keydown={e => {
+		if (e.key == 'Escape') $zoomedInImg = null
+	}}
+/>
+
 {#if $zoomedInImg}
 	<div
 		class="zoomed-in-wrapper"
