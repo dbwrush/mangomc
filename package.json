@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"sanitize-html": "^2.7.0"
+		"sanitize-html": "^2.7.0",
+		"svelte-gallery": "^1.3.5"
 	}
 }

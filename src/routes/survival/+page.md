@@ -5,10 +5,21 @@ title: Survival | MangoMC
 # Survival
 
 MangoMC hosts a vanilla-like Survival world with quality-of-life improvements and anti-griefing plugins.
- 
-<br>
 
-![Server Spawn](/images/srv_spawn.png)
+<script>
+  import Gallery from 'svelte-gallery';
+
+  const images = [
+    { src: '/images/srv_spawn.png', width: 1920, height: 1080 },
+    { src: '/images/srv_ducks_zoom.png', width: 1920, height: 1080 },
+    { src: '/images/srv_shop.png', width: 1920, height: 1080 },
+    { src: '/images/srv_sudohouse.png', width: 1920, height: 1080 },
+    { src: '/images/srv_sudohouse.png', width: 1920, height: 1080 }
+  ];
+</script>
+
+<Gallery {images} />
+ 
 
 ## Plot Claiming
 
