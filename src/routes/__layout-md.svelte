@@ -11,7 +11,6 @@
 	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import Status from '$lib/Status.svelte'
-	import StyleSelector from '$lib/StyleSelector.svelte'
 
 	const zoomedInImg = writable(null)
 	setContext('zoomedInImg', zoomedInImg)
@@ -98,8 +97,6 @@
 		</button>
 	</div>
 {/if}
-
-<StyleSelector />
 
 <style>
 	.zoomed-in-wrapper {
