@@ -5,7 +5,10 @@
 	export let alt
 </script>
 
-<button on:click={() => ($zoomedInImg = { src, alt, ...$$restProps })}>
+<button
+	aria-label="Zoom in on image"
+	on:click={() => ($zoomedInImg = { src, alt, ...$$restProps })}
+>
 	<img {src} {alt} {...$$restProps} />
 </button>
 
