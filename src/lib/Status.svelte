@@ -150,3 +150,42 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+	button {
+		user-select: none;
+		margin: 0;
+		padding: 0;
+		background: none;
+		border: none;
+	}
+	.server-info {
+		display: grid;
+		grid-template-columns: 64px 1fr;
+		font-size: 16px;
+		letter-spacing: -0.5px;
+		word-spacing: 5px;
+		font-family: Mojang, monospace;
+		gap: 10px;
+		padding: 4px 6px;
+	}
+	.server-info-content {
+		white-space: pre-line;
+	}
+	.server-info_top-bar {
+		display: block;
+		width: 100%;
+	}
+	.server-info_name {
+		margin-right: 8px;
+	}
+	.server-info_status {
+		color: #aaa;
+	}
+	.server-info_playercount {
+		float: right;
+	}
+	.server-info-content > span {
+		margin: 6px 0;
+	}
+</style>

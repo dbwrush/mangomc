@@ -3,10 +3,6 @@ title: MangoMC
 hasRibbon: true
 ---
 
-![MangoMC's Lobby](/images/lobby-mango.webp)
-
-<br/>
-
 <script>
 	import Gallery from 'svelte-gallery'
 	import ImgWrapper from '$lib/ImgWrapper.svelte'

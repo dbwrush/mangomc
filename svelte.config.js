@@ -24,7 +24,7 @@ const config = {
 		}),
 		mdsvex({
 			extensions: ['.md'],
-			layout: 'src/routes/__layout-md.svelte'
+			layout: 'src/routes/md-layout.svelte'
 		})
 	]
 }

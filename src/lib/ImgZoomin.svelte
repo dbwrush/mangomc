@@ -1,19 +1,9 @@
-<script context="module">
-	import img from '$lib/ImgWrapper.svelte'
-	export { img }
-</script>
-
 <script>
 	import { fade, scale } from 'svelte/transition'
 	import { browser } from '$app/environment'
 	import { focusTrap } from 'svelte-focus-trap'
-	import '../app.postcss'
-	import { setContext } from 'svelte'
-	import { writable } from 'svelte/store'
-	import Status from '$lib/Status.svelte'
-
-	const zoomedInImg = writable(null)
-	setContext('zoomedInImg', zoomedInImg)
+	import { getContext } from 'svelte'
+	const zoomedInImg = getContext('zoomedInImg')
 
 	$: {
 		if (browser) {
@@ -21,45 +11,7 @@
 			else document.body.style.overflowY = 'auto'
 		}
 	}
-
-	export let title
-	export let hasRibbon = false
 </script>
-
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
-
-<div class="header">
-	<a href="/"><h1>MangoMC</h1></a>
-	<p>
-		<a class="link-button" href="/survival">Survival SMP</a>
-		<a class="link-button" href="/creative">Creative Plots</a>
-		<a class="link-button" href="/minigames">Minigames</a>
-	</p>
-</div>
-{#if hasRibbon}
-	<div class="ribbon" />
-	<div class="ribbon-cover">
-		<Status />
-	</div>
-{/if}
-<div class="a-bg min-half-full">
-	{#if hasRibbon}
-		<a class="overlapping-button" href="https://discord.com/invite/AYctqMETWg">
-			Join the Discord!
-		</a>
-	{/if}
-	<div class="page-content {hasRibbon ? '' : 'only-content'}">
-		<slot />
-	</div>
-</div>
-
-<svelte:window
-	on:keydown={e => {
-		if (e.key == 'Escape') $zoomedInImg = null
-	}}
-/>
 
 {#if $zoomedInImg}
 	<div
@@ -99,6 +51,12 @@
 {/if}
 
 <style>
+	button {
+		margin: 0;
+		padding: 0;
+		border: none;
+		background: none;
+	}
 	.zoomed-in-wrapper {
 		background-color: rgb(0 0 0 / 0.6);
 		backdrop-filter: blur(6px);
@@ -112,6 +70,7 @@
 		bottom: 0;
 	}
 	.zoomed-in-wrapper .escape-button-bg {
+		cursor: zoom-out;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -120,6 +79,7 @@
 		width: 100%;
 	}
 	.zoomed-in-wrapper .escape-button {
+		cursor: pointer;
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
