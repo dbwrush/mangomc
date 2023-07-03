@@ -17,5 +17,5 @@ If you want to add this plugin on your own server you can download it from [spig
 
 ![Ledges](/images/ledges.jpg)
 
-Losely inspired by _Super Smash Bros_, Ledges is a game about knockback. Each hit you take increases the amount of knockback you will take until you fall off the ledges. View your stats by running the /showleaderboard command.
+Loosely inspired by _Super Smash Bros_, Ledges is a game about knockback. Each hit you take increases the amount of knockback you will take until you fall off the ledges. View your stats by running the /showleaderboard command.
 If you want to add this plugin on your own server you can download it from [spigotmc.org](https://www.spigotmc.org/resources/ledges.99653/)
