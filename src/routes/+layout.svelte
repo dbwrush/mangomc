@@ -19,13 +19,13 @@
 						<a href="/survival">Survival SMP</a>
 						<a href="/creative">Creative Plots</a>
 						<a href="/minigames">Minigames</a>
+						<a
+							class="discord-invite"
+							href="https://discord.com/invite/AYctqMETWg"
+						>
+							Discord
+						</a>
 					</nav>
-					<a
-						class="discord-invite"
-						href="https://discord.com/invite/AYctqMETWg"
-					>
-						Join the Discord
-					</a>
 				</div>
 			</header>
 			<div class="header-server-status">
@@ -49,7 +49,7 @@
 					<a href="/survival">Survival SMP</a>
 					<a href="/creative">Creative Plots</a>
 					<a href="/minigames">Minigames</a>
-					<a href="https://discord.com/invite/AYctqMETWg">Join the Discord</a>
+					<a href="https://discord.com/invite/AYctqMETWg">Discord</a>
 				</div>
 			</div>
 		</div>
@@ -80,7 +80,7 @@
 			url(/textures/dirt.png);
 	}
 	header {
-		min-height: 20rem;
+		min-height: 16rem;
 		isolation: isolate;
 		position: relative;
 		display: grid;
@@ -121,20 +121,6 @@
 		font-size: 2.5rem;
 		font-weight: 800;
 	}
-	.discord-invite {
-		user-select: none;
-		text-decoration: none;
-		color: white;
-		font-weight: 700;
-		padding: 0.25rem 0.5rem;
-		border-radius: 0.25rem;
-		background: #5865f2;
-		transform: scale(1);
-		transition: transform 100ms cubic-bezier(0.075, 0.82, 0.165, 1);
-	}
-	.discord-invite:hover {
-		transform: scale(1.05);
-	}
 	nav {
 		display: flex;
 		flex-wrap: wrap;
@@ -146,14 +132,15 @@
 		text-decoration: none;
 		color: #fff;
 		font-weight: 700;
-		background-color: rgb(155 73 60);
+		backdrop-filter: blur(4px);
+		background-color: rgba(248 94 67 / 0.1);
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.25rem;
 		transition: background-color 100ms;
 		text-align: center;
 	}
 	nav a:hover {
-		background-color: rgb(199 120 108);
+		background-color: rgb(248 94 67 / 0.2);
 	}
 
 	footer {
