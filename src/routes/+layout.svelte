@@ -39,16 +39,18 @@
 	</div>
 
 	<footer>
-		<div class="footer-section footer-logo-section">
-			<img src="/logo.png" alt="" aria-hidden="true" />
-		</div>
-		<div class="footer-section">
-			<p class="footer-section-title">MangoMC</p>
-			<div class="footer-section-links">
-				<a href="/survival">Survival SMP</a>
-				<a href="/creative">Creative Plots</a>
-				<a href="/minigames">Minigames</a>
-				<a href="https://discord.com/invite/AYctqMETWg">Join the Discord</a>
+		<div class="footer-content">
+			<div class="footer-section footer-logo-section">
+				<img src="/logo.png" alt="" aria-hidden="true" />
+			</div>
+			<div class="footer-section">
+				<p class="footer-section-title">MangoMC</p>
+				<div class="footer-section-links">
+					<a href="/survival">Survival SMP</a>
+					<a href="/creative">Creative Plots</a>
+					<a href="/minigames">Minigames</a>
+					<a href="https://discord.com/invite/AYctqMETWg">Join the Discord</a>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -154,12 +156,18 @@
 	}
 
 	footer {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+		display: grid;
+		place-items: center;
 		padding: 1rem;
 		margin-top: 2rem;
 		background-color: black;
+	}
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 60rem;
+		gap: 2rem;
 	}
 	.footer-section {
 		max-width: 100%;
@@ -176,12 +184,17 @@
 		width: 64px;
 	}
 	@media screen and (min-width: 900px) {
-		footer {
+		.footer-content {
 			flex-direction: row;
-			padding: 1rem 4rem;
 		}
 		.footer-section {
 			min-width: 10rem;
+		}
+		.footer-logo-section {
+			min-width: 5rem;
+		}
+		.footer-logo-section {
+			align-items: center;
 		}
 	}
 	.footer-section-title {
