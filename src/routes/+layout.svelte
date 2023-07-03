@@ -9,32 +9,57 @@
 	setContext('zoomedInImg', zoomedInImg)
 </script>
 
-<div class="header-wrapper">
-	<header>
-		<div class="header-content">
-			<a href="/" class="wordmark">MangoMC</a>
-			<nav>
+<div class="layout">
+	<div class="main-layout">
+		<div class="header-wrapper">
+			<header>
+				<div class="header-content">
+					<a href="/" class="wordmark">MangoMC</a>
+					<nav>
+						<a href="/survival">Survival SMP</a>
+						<a href="/creative">Creative Plots</a>
+						<a href="/minigames">Minigames</a>
+					</nav>
+					<a
+						class="discord-invite"
+						href="https://discord.com/invite/AYctqMETWg"
+					>
+						Join the Discord
+					</a>
+				</div>
+			</header>
+			<div class="header-server-status">
+				<Status />
+			</div>
+		</div>
+
+		<main>
+			<slot />
+		</main>
+	</div>
+
+	<footer>
+		<div class="footer-section footer-logo-section">
+			<img src="/logo.png" alt="" aria-hidden="true" />
+		</div>
+		<div class="footer-section">
+			<p class="footer-section-title">MangoMC</p>
+			<div class="footer-section-links">
 				<a href="/survival">Survival SMP</a>
 				<a href="/creative">Creative Plots</a>
 				<a href="/minigames">Minigames</a>
-			</nav>
-			<a class="discord-invite" href="https://discord.com/invite/AYctqMETWg">
-				Join the Discord
-			</a>
+				<a href="https://discord.com/invite/AYctqMETWg">Join the Discord</a>
+			</div>
 		</div>
-	</header>
-	<div class="header-server-status">
-		<Status />
-	</div>
+	</footer>
 </div>
-
-<main>
-	<slot />
-</main>
 
 <ImgZoomin />
 
 <style lang="postcss">
+	.main-layout {
+		min-height: 100vh;
+	}
 	.header-wrapper {
 		isolation: isolate;
 	}
@@ -126,5 +151,52 @@
 	}
 	nav a:hover {
 		background-color: rgb(199 120 108);
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem;
+		margin-top: 2rem;
+		background-color: black;
+	}
+	.footer-section {
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.footer-logo-section {
+		min-width: 5rem;
+		user-select: none;
+		justify-content: center;
+	}
+	.footer-logo-section img {
+		width: 64px;
+	}
+	@media screen and (min-width: 900px) {
+		footer {
+			flex-direction: row;
+			padding: 1rem 4rem;
+		}
+		.footer-section {
+			min-width: 10rem;
+		}
+	}
+	.footer-section-title {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	.footer-section-links {
+		color: rgb(255 255 255 / 0.6);
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.footer-section-links a {
+		text-decoration: none;
+		color: inherit;
 	}
 </style>
