@@ -98,13 +98,14 @@
 		content: '';
 		background-position: center;
 		background-image: url(/images/lobby-mango.webp);
+		background-size: cover;
 		-webkit-mask-image: linear-gradient(
 			-45deg,
 			rgb(0 0 0 / 0.1),
 			rgb(0 0 0 / 0.2)
 		);
 		mask-image: linear-gradient(-45deg, rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.2));
-		filter: blur(6px);
+		filter: blur(1px);
 		transform: scale(1.2);
 	}
 	.header-content {
